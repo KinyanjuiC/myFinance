@@ -4,14 +4,14 @@ A comprehensive personal finance tracking application built with Next.js and Rea
 
 ## ✨ Features
 
-### 🎨 Aesthetic User Interface (5 marks)
+### 🎨 Aesthetic User Interface 
 - **Modern Design**: Clean, professional interface with gradient backgrounds and card-based layouts
 - **Color-Coded Categories**: Each transaction category has unique icons and colors for easy identification
 - **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
 - **Custom Styling**: Beautiful typography, smooth transitions, and hover effects
 - **Visual Feedback**: Loading states, animations, and interactive elements enhance user experience
 
-### ⚙️ Working Functionality (10 marks)
+### ⚙️ Working Functionality 
 - **Transaction Management**: Add, edit, and delete income/expense transactions
 - **Data Persistence**: Automatic saving to localStorage with error handling
 - **Advanced Filtering**: Filter by category, type, date range with real-time updates
@@ -21,7 +21,7 @@ A comprehensive personal finance tracking application built with Next.js and Rea
 - **Data Validation**: Comprehensive form validation with user-friendly error messages
 - **Sample Data**: Load demo data spanning May-July 2025 to quickly explore application features
 
-### 🚀 Rich User Experience (10 marks)
+### 🚀 Rich User Experience 
 - **Interactive Charts**: Visual analytics with custom-drawn income vs expense charts
 - **Real-time Updates**: Instant calculation of totals, averages, and balances
 - **Smart Notifications**: Toast notifications for all user actions with auto-dismissal
