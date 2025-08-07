@@ -1,0 +1,272 @@
+/* Global Styles for PesaView */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Button animations */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-press {
+  animation: buttonPress 0.1s ease;
+}
+
+/* Form input focus effects */
+input:focus,
+select:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  outline: none;
+}
+
+/* Table row hover effects */
+tr:hover {
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
+/* Notification slide-in animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification-enter {
+  animation: slideInRight 0.3s ease;
+}
+
+.notification-exit {
+  animation: slideOutRight 0.3s ease;
+}
+
+/* Pagination styles */
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pagination-button {
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.pagination-current {
+  background-color: #28a745 !important;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px !important;
+  }
+  
+  .form-group {
+    flex-direction: column !important;
+  }
+  
+  .input-group {
+    flex: 1 1 100% !important;
+    min-width: auto !important;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    min-width: 600px;
+  }
+  
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .pagination-controls {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .pagination-button {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+    min-width: 35px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .card {
+    padding: 20px !important;
+  }
+  
+  .table-cell {
+    padding: 8px !important;
+    font-size: 14px;
+  }
+  
+  .button {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000 !important;
+  }
+  
+  .button {
+    border: 2px solid #000 !important;
+  }
+  
+  input, select {
+    border: 2px solid #000 !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a6fd8;
+}
+
+/* Selection styles */
+::selection {
+  background: #667eea;
+  color: white;
+}
+
+::-moz-selection {
+  background: #667eea;
+  color: white;
+}
